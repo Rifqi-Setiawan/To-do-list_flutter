@@ -3,8 +3,8 @@ import 'package:to_do_list_flutter/util/my_button.dart';
 
 class DialogBox extends StatelessWidget {
   final controller;
-  VoidCallback onSave;
-  VoidCallback onCancel;
+  final VoidCallback onSave;
+  final VoidCallback onCancel;
   DialogBox({super.key, required this.controller, required this.onSave, required this.onCancel});
 
   @override
@@ -19,7 +19,7 @@ class DialogBox extends StatelessWidget {
             // Users input
             TextField(
               controller: controller,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: "Tambahkan tugas baru",
               ),
