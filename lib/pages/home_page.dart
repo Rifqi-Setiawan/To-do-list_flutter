@@ -10,10 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List toDoList = [
-    ["Make tutorial", false],
-    ["Do Exercise", false],
-  ];
+  List toDoList = [];
 
   void checkBoxChanged(bool? value, int index) {
     setState(() {
@@ -51,16 +48,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.yellow[200],
+        backgroundColor: Colors.cyan[200],
         appBar: AppBar(
           centerTitle: true,
           title: const Text("TO DO List - rifqi"),
           elevation: 0,
-          backgroundColor: Colors.yellow,
+          backgroundColor: Colors.cyan[300],
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: createNewTask,
-          backgroundColor: Colors.yellow,
+          backgroundColor: Colors.cyan,
           child: const Icon(Icons.add),
         ),
         body: ListView.builder(
